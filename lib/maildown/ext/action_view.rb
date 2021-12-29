@@ -3,7 +3,7 @@
 # This monkeypatch allows the use of `.md.erb` file extensions
 # in addition to `.md+erb` and `.md`
 module ActionView
-  class OptimizedFileSystemResolver
+  class FileSystemResolver
     alias :original_extract_handler_and_format_and_variant :extract_handler_and_format_and_variant
 
     # Different versions of rails have different

@@ -7,7 +7,7 @@ class ExtActionMailerTest < ActiveSupport::TestCase
     path        = monkeypatch.source_location.first
     assert_match "maildown/ext/action_mailer.rb", path
 
-    monkeypatch = ActionView::OptimizedFileSystemResolver.instance_method(:extract_handler_and_format_and_variant)
+    monkeypatch = ActionView::FileSystemResolver.instance_method(:extract_handler_and_format_and_variant)
     path        = monkeypatch.source_location.first
     assert_match "maildown/ext/action_view.rb", path
   end
